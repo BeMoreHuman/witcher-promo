@@ -1,0 +1,44 @@
+@import 'variables';
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+  .container, .header, .footer {
+    padding-left: $side-padding-tablet;
+    padding-right: $side-padding-tablet;
+  }
+  .btn-play {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container, .header, .footer {
+    padding-left: $side-padding-mobile;
+    padding-right: $side-padding-mobile;
+  }
+}
+@media screen and (max-width: 650px) {
+  .header {
+    &__logo, &__nav, &__social {
+      display: none;
+    }
+  }
+  .page-title {
+    font-size: 56px;
+  }
+  .page-btn {
+    margin-bottom: 40px;
+  }
+  .thumbs {
+    &__item:not(:last-child) {
+      display: none;
+    }
+  }
+  .footer {
+    flex-direction: column;
+    &__text {
+      margin-bottom: 10px;
+    }
+  }
+}
